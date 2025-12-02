@@ -1,11 +1,26 @@
 package lk.bodimSangayo.project.studyVault.dto;
 
-import java.io.Serializable;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+
+import java.io.Serializable;
+import java.time.LocalDate;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class UserDTO implements Serializable {
     private String userId;
     private String userName;
+    private String firstName;
+    private String lastName;
     private String password;
     private String gmail;
     private String phone;
+    private LocalDate dateOfBirth;
+    private LocalDate accountCreatedDate;
+    private Role role;
+
 }
