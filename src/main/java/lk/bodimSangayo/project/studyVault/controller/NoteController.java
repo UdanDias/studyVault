@@ -32,7 +32,7 @@ public class NoteController {
     @PatchMapping(value = "/{noteId}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> updateNote(@PathVariable String noteId,@RequestBody NoteDTO noteDTO) {
         System.out.println(noteDTO);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
     @GetMapping("/getSelectedNote/{noteId}")
     public ResponseEntity<NoteDTO> getSelectedNote(@PathVariable String noteId) {

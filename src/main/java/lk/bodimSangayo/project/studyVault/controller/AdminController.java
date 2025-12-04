@@ -13,7 +13,7 @@ import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-@Slf4j
+
 @RestController
 @RequestMapping("/api/v1/admin")
 public class AdminController {
@@ -34,7 +34,7 @@ public class AdminController {
     @PatchMapping(value = "{adminId}", consumes = APPLICATION_JSON_VALUE,produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> updateAdmin(@PathVariable String adminId,@RequestBody AdminDTO adminDTO){
         System.out.println(adminDTO);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.noContent().build();
     }
     @GetMapping("/getSelectedAdmin/{adminId}")
     public ResponseEntity<AdminDTO> getSelectedAdmin(@PathVariable String adminId){

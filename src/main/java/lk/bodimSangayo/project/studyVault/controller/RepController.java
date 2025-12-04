@@ -32,7 +32,7 @@ public class RepController {
     @PatchMapping("/{repId}")
     public ResponseEntity<Void> updateRep(@PathVariable String repId ,@RequestBody RepDTO repDTO){
         System.out.println(repDTO);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
     @GetMapping("/getSelectedRep/{repId}")
     public ResponseEntity<RepDTO> getSelectedRep(@PathVariable String repId){

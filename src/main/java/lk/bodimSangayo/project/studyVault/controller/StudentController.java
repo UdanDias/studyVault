@@ -31,7 +31,7 @@ public class StudentController {
     @PatchMapping("/{studentId}")
     public ResponseEntity<Void> updateStudent(@PathVariable String studentId ,@RequestBody StudentDTO studentDTO){
         System.out.println(studentDTO);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
     @GetMapping("/getSelectedStudent/{studentId}")
     public ResponseEntity<StudentDTO> getSelectedStudent(@PathVariable String studentId){

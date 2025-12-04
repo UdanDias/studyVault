@@ -38,7 +38,7 @@ public class PaperController {
     @PatchMapping("/{paperId}")
     public ResponseEntity<Void> updatePaper(@PathVariable String paperId, @RequestBody PaperDTO paperDTO) {
         System.out.println(paperDTO);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
     @GetMapping("/getSelectedPaper/{paperId}")
     public ResponseEntity<PaperDTO>getSelectedPaper(@PathVariable String paperId) {

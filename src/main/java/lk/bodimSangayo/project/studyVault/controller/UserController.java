@@ -34,7 +34,7 @@ public class UserController {
     @PatchMapping("/{userId}")
     public ResponseEntity<Void> updateUser(@PathVariable String userId ,@RequestBody UserDTO userDTO){
         System.out.println(userDTO);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
     @GetMapping("/getSelectedUser/{userId}")
     public ResponseEntity<UserDTO> getSelectedUser(@PathVariable String userId){

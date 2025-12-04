@@ -25,7 +25,7 @@ public class CourseController {
     @PatchMapping("/{courseId}")
     public ResponseEntity<Void> updateCourse(@PathVariable String courseId ,@RequestBody CourseDTO courseDTO){
         System.out.println(courseDTO);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
     @DeleteMapping("/{courseId}")
     public ResponseEntity<Void>deleteCourse(@PathVariable String courseId){
