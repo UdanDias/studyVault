@@ -1,7 +1,10 @@
 package lk.bodimSangayo.project.studyVault.controller;
 
 import lk.bodimSangayo.project.studyVault.dto.AdminDTO;
+import lk.bodimSangayo.project.studyVault.service.AdminService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +19,14 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 @RequestMapping("/api/v1/admin")
+@RequiredArgsConstructor
 public class AdminController {
+
+    private final AdminService adminService;
+
+//    public AdminController(AdminService adminService) {
+//        this.adminService = adminService;
+//    }
 
     @GetMapping()
     public String healthCheck(){
@@ -25,6 +35,7 @@ public class AdminController {
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> addAdmin(@RequestBody AdminDTO adminDTO){
         System.out.println(adminDTO);
+        adminService.addAdmin(adminDTO);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
     @DeleteMapping("{adminId}")

@@ -16,9 +16,4 @@ public class AdminDTO implements Serializable {
     private String phone;
     private LocalDate joinedDate;
 
-
-
-
-
-
 }
