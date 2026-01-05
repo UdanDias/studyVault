@@ -2,6 +2,7 @@ package lk.bodimSangayo.project.studyVault.service.serviceImpl;
 
 import lk.bodimSangayo.project.studyVault.dto.CourseDTO;
 import lk.bodimSangayo.project.studyVault.service.CourseService;
+import lk.bodimSangayo.project.studyVault.util.UtilData;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +11,8 @@ import java.util.List;
 public class CourseServiceImpl implements CourseService {
     @Override
     public void addCourse(CourseDTO courseDTO) {
-
+        courseDTO.setCourseId(UtilData.generateCourseId());
+        System.out.println(courseDTO);
     }
 
     @Override

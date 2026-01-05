@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 
 import java.io.Serializable;
+import java.sql.Time;
 import java.time.LocalDate;
 
 @AllArgsConstructor
@@ -21,6 +22,7 @@ public class UserDTO implements Serializable {
     private String phone;
     private LocalDate dateOfBirth;
     private LocalDate accountCreatedDate;
+    private Time accountCreatedTime;
     private Role role;
 
 }

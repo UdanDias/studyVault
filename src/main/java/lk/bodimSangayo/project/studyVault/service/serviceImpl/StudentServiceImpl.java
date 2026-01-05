@@ -2,6 +2,7 @@ package lk.bodimSangayo.project.studyVault.service.serviceImpl;
 
 import lk.bodimSangayo.project.studyVault.dto.StudentDTO;
 import lk.bodimSangayo.project.studyVault.service.StudentService;
+import lk.bodimSangayo.project.studyVault.util.UtilData;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +11,8 @@ import java.util.List;
 public class StudentServiceImpl implements StudentService {
     @Override
     public void addStudent(StudentDTO studentDTO) {
-
+        studentDTO.setStudentId(UtilData.generateStudentId());
+        System.out.println(studentDTO);
     }
 
     @Override

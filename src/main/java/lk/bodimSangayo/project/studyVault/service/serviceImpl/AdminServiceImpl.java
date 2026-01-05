@@ -11,6 +11,7 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public void addAdmin(AdminDTO adminDTO) {
         adminDTO.setAdminId(UtilData.generateAdminId());
+        adminDTO.setJoinedDate(UtilData.generateTodayDate());
         System.out.println(adminDTO);
 
 
